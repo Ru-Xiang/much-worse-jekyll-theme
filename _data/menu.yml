@@ -1,18 +1,26 @@
-- title: "Research"
-  href: "/research/"
+- title: "HOME"
+  href: "/"
 
-- title: "CV"
-  href: "/cv/"
-
-- title: "Misc"
-  href: "/misc/"
-
-- title: "Submenu"
+- title: "LIBBLE-Spark"
+  href: "/libble-spark/"
   subcategories:
-    - subtitle: "Item 1"
-      subhref: "/misc/item-1/"
-    - subtitle: "Item 2"
-      subhref: "/misc/item-2/"
+    - subtitle: "Introduction"
+      subhref: "/libble-spark/#introduction"
+    - subtitle: "Tutorial"
+      subhref: "/libble-spark/#tutorial"	
+    - subtitle: "Open Source"
+      subhref: "/libble-spark/#open-source"
+    - subtitle: "API"
+      subhref: "/libble-spark/#api"	  
+  
+- title: "Publications"
+  href: "/publications/"
 
-- title: "Blog"
-  href: "/blog/"
+- title: "Downloads"
+  href: "/downloads"
+  subcategories:
+    - subtitle: "LIBBLE-Spark"
+      subhref: "/downloads/#libble-spark/"
+  
+- title: "News"
+  href: "/news/"

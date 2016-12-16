@@ -4,6 +4,7 @@
 @charset "utf-8";
 
 $base-font-family: 'EB Garamond', serif;
+$large-font-size: 1.5em;
 $base-font-size:   x-large;
 $small-font-size:  0.875em;
 $vsmall-font-size: 0.66em;
@@ -34,7 +35,7 @@ $line-color:        $grey-light;
 $content-width:    50em;
 $content-min-width:15em;
 $mobile:           32em;
-$desktop:          50em;
+$desktop:          55em;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {

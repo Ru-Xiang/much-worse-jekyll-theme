@@ -6,26 +6,38 @@
     @extend %clearfix;
 }
 
-.site-header, .site-header a {
-    color: $header-text-color;
+.site-header .site-header a {
+    color: $url-color;
 }
 .site-header a:hover {
-    color: $header-hover-color;
+    color: $url-hover-color;
     text-decoration: none;
 }
 
 .site-title {
-    margin-top: 1em;
-    margin-bottom: 1em;
+	font-size: $large-font-size;
+    margin-top: 0.4em;
+    margin-bottom: 0.3em;
     float: left;
     letter-spacing: 1px;
 }
 
+.site-description {
+	font-size: $vsmall-font-size;
+	float: left;
+	text-align: left;
+	margin-top: 50px;
+	margin-left: -105px;
+	margin-bottom:0.1em;
+	letter-spacing: 1px;
+}
 .site-nav {
     background: $background;
 }
 
 .site-nav ul {
+	margin-top: 1em;
+	margin-bottom: 0.4em;
     text-align: right;
     float: right;
     letter-spacing: 1px;
@@ -73,8 +85,8 @@
     position: absolute;
     text-align: left;
     text-transform: none;
-    top: 28px;
-    min-width: 200px;
+    top: 10px;
+    min-width: 170px;
     z-index:999;
 }
 

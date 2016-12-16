@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Blog
-permalink: /blog/
+permalink: /news/
 ---
 
-Here is the much awaited blog.
+## News
 
 <ul class="listing">
 {% for post in site.posts %}
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
   {% if year != y %}
+
     {% assign year = y %}
     <li class="listing-seperator">{{ y }}</li>
   {% endif %}
