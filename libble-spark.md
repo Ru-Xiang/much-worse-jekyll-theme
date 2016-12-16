@@ -11,18 +11,18 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
 
 > * Classification
 >   * Logistic Regression (LR)
->   * Logistic Regression with L1 (Lasso)
+>   * Logistic Regression with L1-norm Regularization
 >   * Support Vector Machine (SVM)
 > * Regression
 >   * Linear Regression
 >   * Lasso
+> * Collaborative Filtering
+>   * Matrix Factorization
 > * Dimensionality Reduction
 >   * Principal Component Analysis (PCA)
 >   * Singular Value Decomposition (SVD)
 > * Clustering
 >   * K-Means
-> * Collaborative Filtering
->   * Matrix Factorization
 
 ### [Tutorial](#tutorial)
 
@@ -80,7 +80,7 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
   training.saveAsLIBBLEFile("this.data")
   ~~~
 
-* Classification and Regression
+* #### Classification and Regression
 
   Here, we give an example of using Logistic Regression. The usages of Linear Regression and SVM are similar. You can find the complete codes in the package "examples".
 
@@ -91,7 +91,7 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
   m.train(training)
   ~~~
 
-* Self-Defined Generalized Linear Model
+* #### Self-Defined Generalized Linear Model
 
   In our framework, you are allowed to define your own generalized linear models by using our learning engine to optimize. You can define your loss function by implementing the interface of the abstract class LossFunc. Here, we give an example of GeneralizedLinearModel:
 
@@ -103,7 +103,18 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
   m.train(training)
   ~~~
 
-* Dimensionality Reduction
+* #### Collaborative Filtering
+
+  Collaborative filtering is widly used in recommendation systems. An example to perform collaborative filtering with  the UV matrix factorization is shown as follows:
+  ~~~scala
+  val trainSet = sc.textFile(args(0), numParts)
+      .map(_.split(',') match { case Array(user, item, rate) =>
+          Rating(rate.toDouble, user.toInt, item.toInt)})
+  val model = new MatrixFactorization()
+    	.train(trainSet, numIters, numParts, rank, regParam_u, regParam_v,stepsize)
+  ~~~
+
+* #### Dimensionality Reduction
 
   Principal Component Analysis (PCA) is a widely used method for dimensionality reduction. An example to perform dimensionality reduction with PCA is shown as follows:
 
@@ -128,7 +139,7 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
   v.foreach(x=>println(x))
   ~~~
 
-* Clustering
+* #### Clustering
 
   K-Means is a widely used prototype-based clustering algorithms. An example to perform clustering with K-Means is shown as follows:
 
@@ -139,17 +150,6 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
   m.train(data)
   ~~~
 
-* Collaborative Filtering
-
-  Collaborative filtering is widly used in recommendation systems. An example to perform collaborative filtering with  the UV matrix factorization is shown as follows:
-
-  ~~~scala
-  val trainSet = sc.textFile(args(0), numParts)
-      .map(_.split(',') match { case Array(user, item, rate) =>
-          Rating(rate.toDouble, user.toInt, item.toInt)})
-  val model = new MatrixFactorization()
-    	.train(trainSet, numIters, numParts, rank, regParam_u, regParam_v,stepsize)
-  ~~~
 
 ### [Open Source](#open-source)
 

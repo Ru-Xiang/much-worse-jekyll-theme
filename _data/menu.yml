@@ -17,10 +17,10 @@
   href: "/publications/"
 
 - title: "Downloads"
-  href: "/downloads"
+  href: "/downloads/"
   subcategories:
     - subtitle: "LIBBLE-Spark"
-      subhref: "/downloads/#libble-spark/"
+      subhref: "/downloads/#libble-spark"
   
 - title: "News"
   href: "/news/"

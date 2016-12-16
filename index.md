@@ -7,7 +7,7 @@ permalink: /
 
 LIBBLE is the abbreviation for “a LIBrary for Big LEarning”, which provides a toolbox for big data machine learning and data science. We are planning to implement LIBBLE on different distributed platforms, and the version implemented on [Spark](http://spark.apache.org/) is called [LIBBLE-Spark](/LIBBLE-Spark).
 
-LIBBLE is developed by a team under the supervision of [Dr. Wu-Jun Li](), an Associate Professor at Nanjing University.
+LIBBLE is developed by a team under the supervision of [Dr. Wu-Jun Li](http://cs.nju.edu.cn/lwj/), an Associate Professor at Nanjing University.
 
 ### [Empirical Comparison](#empirical-comparison)
 
@@ -26,7 +26,7 @@ The main Learning Engine for LIBBLE is based on a distributed stochastic optimiz
 
 * Speedup
 
-  The speedup is defined as follows: $speedup= \frac{\{time with 16 cores\}}{\{time with 2x cores\}}$. And we choose $x$. The speedup result is shown below, where we can find that SCOPE has a super-linear speedup, which might be reasonable due to the higher cache hit ratio with more machines. The good speedup of SCOPE can be explained by the fact that most training work can be locally completed by each Worker and SCOPE does not need much communication cost.
+  The speedup is defined as follows: ![speeduplatex](images\speeduplatex.gif) . And we choose ![xdingyi](images\xdingyi.gif). The speedup result is shown below, where we can find that SCOPE has a super-linear speedup, which might be reasonable due to the higher cache hit ratio with more machines. The good speedup of SCOPE can be explained by the fact that most training work can be locally completed by each Worker and SCOPE does not need much communication cost.
 
   <div align="center">
 
