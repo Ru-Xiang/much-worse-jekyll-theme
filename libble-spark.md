@@ -34,7 +34,7 @@ LIBBLE-Spark is part of the Project LIBBLE. The current version of LIBBLE-Spark 
 
     ~~~xml
     <repository>
-        <Id>libble-spark</Id>
+        <id>libble-spark</id>
         <url>
             https://libble.github.io/mvn-repo/
         </url>
