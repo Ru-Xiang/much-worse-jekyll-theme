@@ -45,7 +45,7 @@ Version-{{lib.version}}    
 
 Codes: <a href="{{lib.src}}"> {{lib.src-name}}</a> <br/>
 
-Release: <a href="{{lib.release}}"> {{lib.release-name}}</a>({%if lib.release-note %}({{lib.release-note}}){%endif%}
+Release: <a href="{{lib.release}}"> {{lib.release-name}}</a>{%if lib.release-note %}({{lib.release-note}}){%endif%}
 
 <br/>
 
