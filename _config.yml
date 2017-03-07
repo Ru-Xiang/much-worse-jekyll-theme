@@ -29,7 +29,7 @@ analytics:
         sc_invisible: 1
         sc_text     : 2
     google:
-        tracking_id: ''
+        tracking_id: 'UA-93186714-1'
     getclicky:
       site_id:
     mixpanel:
