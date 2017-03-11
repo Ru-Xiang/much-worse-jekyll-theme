@@ -6,7 +6,7 @@ permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
 
 url: "https://libble.github.io"     # the base hostname & protocol for your site
-baseurl: "/LIBBLE-docs"                   # the subpath of your site, e.g. /blog
+baseurl: ""                   # the subpath of your site, e.g. /blog
 
 author:
     name: "LIBBLE Team"
@@ -29,7 +29,7 @@ analytics:
         sc_invisible: 1
         sc_text     : 2
     google:
-        tracking_id: 'UA-93186714-1'
+        tracking_id: 
     getclicky:
       site_id:
     mixpanel:

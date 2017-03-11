@@ -5,7 +5,7 @@ permalink: /
 
 ### [Introduction](#introduction)
 
-LIBBLE is the abbreviation for “a LIBrary for Big LEarning”, which provides a toolbox for big data machine learning and data science. We are planning to implement LIBBLE on different distributed platforms, and the version implemented on [Spark](http://spark.apache.org/) is called [LIBBLE-Spark](LIBBLE-Spark).
+LIBBLE is the abbreviation for “a LIBrary for Big LEarning”, which provides a toolbox for big data machine learning and data science. We are planning to implement LIBBLE on different distributed platforms, and the version implemented on [Spark](http://spark.apache.org/) is called [LIBBLE-Spark](libble-spark).
 
 LIBBLE is developed by a team under the supervision of [Dr. Wu-Jun Li](http://cs.nju.edu.cn/lwj/), an Associate Professor at Nanjing University.
 
